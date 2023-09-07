@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HNG stage 1 task| Personal Data Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Global Container -->
+    <div class="global">
+      <!-- Main Container -->
+      <div class="flex">
+        <!-- Profile Info -->
+        <div>
+          <h1>My Slack Profile</h1>
+          <!-- Name -->
+          <p>
+            Slack Name:
+            <span class="emphasis" data-testid="slackUserName"
+              >Nosakhare004</span
+            >
+          </p>
+
+          <!-- day of week -->
+          <p>
+            Day:
+            <span class="emphasis" data-testid="currentDayOfTheWeek"></span>
+          </p>
+          <script>
+            const days = [
+              "Sunday",
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+            ];
+            document.querySelector(
+              'span[data-testid="currentDayOfTheWeek"]'
+            ).textContent = days[new Date().getDay()];
+          </script>
+
+          <!-- UTC time -->
+          <p>
+            UTC Time(ms):
+            <span class="emphasis" data-testid="currentUTCTime"></span>
+          </p>
+          <script>
+            document.querySelector(
+              'span[data-testid="currentUTCTime"]'
+            ).textContent = new Date().getTime();
+          </script>
+
+          <!-- Track -->
+          <p>
+            Track:
+            <span class="emphasis" data-testid="myTrack"
+              >Fronted Web Development</span
+            >
+          </p>
+
+          <!-- Github Url -->
+          <p>
+            Github:&nbsp;
+            <span class="emphasis">
+              <a
+                href="https://github.com/nosaemma21"
+                target="_blank"
+                data-testid="githubURL"
+                >https://github.com/nosaemma21</a
+              >
+            </span>
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <img
+            src="https://ca.slack-edge.com/T05FFAA91JP-U05RS7Q0EBB-e0db339e53b4-512"
+            data-testid="slackDisplayImage"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
